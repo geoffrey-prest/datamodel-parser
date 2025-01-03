@@ -1,0 +1,123 @@
+{
+    "ABC": {
+        "Filename": "ABC.Database.sql",
+        "Name": "ABC",
+        "Schemas": [
+            {
+                "Name": "dbo",
+                "Tables": [
+                    {
+                        "Filename": "dbo.modulefour$entitysix.Table.sql",
+                        "Type": "simpleTable",
+                        "Name": "modulefour$entitysix",
+                        "Module": "modulefour",
+                        "Entity": "entitysix",
+                        "ReferencingEntity": null,
+                        "ReferencedEntity": null,
+                        "Qualification": null
+                    },
+                    {
+                        "Filename": "dbo.modulefour$entitysix_entityfive.Table.sql",
+                        "Type": "joinTable",
+                        "Name": "modulefour$entitysix_entityfive",
+                        "Module": "modulefour",
+                        "Entity": null,
+                        "ReferencingEntity": "entitysix",
+                        "ReferencedEntity": "entityfive",
+                        "Qualification": null
+                    },
+                    {
+                        "Filename": "dbo.moduleone$entityone.Table.sql",
+                        "Type": "simpleTable",
+                        "Name": "moduleone$entityone",
+                        "Module": "moduleone",
+                        "Entity": "entityone",
+                        "ReferencingEntity": null,
+                        "ReferencedEntity": null,
+                        "Qualification": null
+                    },
+                    {
+                        "Filename": "dbo.moduleone$entityone_entitythree.Table.sql",
+                        "Type": "joinTable",
+                        "Name": "moduleone$entityone_entitythree",
+                        "Module": "moduleone",
+                        "Entity": null,
+                        "ReferencingEntity": "entityone",
+                        "ReferencedEntity": "entitythree",
+                        "Qualification": null
+                    },
+                    {
+                        "Filename": "dbo.moduleone$entitytwo.Table.sql",
+                        "Type": "simpleTable",
+                        "Name": "moduleone$entitytwo",
+                        "Module": "moduleone",
+                        "Entity": "entitytwo",
+                        "ReferencingEntity": null,
+                        "ReferencedEntity": null,
+                        "Qualification": null
+                    },
+                    {
+                        "Filename": "dbo.modulethree$entityfive.Table.sql",
+                        "Type": "simpleTable",
+                        "Name": "modulethree$entityfive",
+                        "Module": "modulethree",
+                        "Entity": "entityfive",
+                        "ReferencingEntity": null,
+                        "ReferencedEntity": null,
+                        "Qualification": null
+                    },
+                    {
+                        "Filename": "dbo.modulethree$entityone_entitythree_current.Table.sql",
+                        "Type": "qualifiedJoinTable",
+                        "Name": "modulethree$entityone_entitythree_current",
+                        "Module": "modulethree",
+                        "Entity": null,
+                        "ReferencingEntity": "entityone",
+                        "ReferencedEntity": "entitythree",
+                        "Qualification": "current"
+                    },
+                    {
+                        "Filename": "dbo.moduletwo$entityfour.Table.sql",
+                        "Type": "simpleTable",
+                        "Name": "moduletwo$entityfour",
+                        "Module": "moduletwo",
+                        "Entity": "entityfour",
+                        "ReferencingEntity": null,
+                        "ReferencedEntity": null,
+                        "Qualification": null
+                    },
+                    {
+                        "Filename": "dbo.moduletwo$entityfour_entitytwo.Table.sql",
+                        "Type": "joinTable",
+                        "Name": "moduletwo$entityfour_entitytwo",
+                        "Module": "moduletwo",
+                        "Entity": null,
+                        "ReferencingEntity": "entityfour",
+                        "ReferencedEntity": "entitytwo",
+                        "Qualification": null
+                    },
+                    {
+                        "Filename": "dbo.moduletwo$entitythree.Table.sql",
+                        "Type": "simpleTable",
+                        "Name": "moduletwo$entitythree",
+                        "Module": "moduletwo",
+                        "Entity": "entitythree",
+                        "ReferencingEntity": null,
+                        "ReferencedEntity": null,
+                        "Qualification": null
+                    },
+                    {
+                        "Filename": "dbo.moduletwo$entitythree_entitysix.Table.sql",
+                        "Type": "joinTable",
+                        "Name": "moduletwo$entitythree_entitysix",
+                        "Module": "moduletwo",
+                        "Entity": null,
+                        "ReferencingEntity": "entitythree",
+                        "ReferencedEntity": "entitysix",
+                        "Qualification": null
+                    }
+                ]
+            }
+        ]
+    }
+}
