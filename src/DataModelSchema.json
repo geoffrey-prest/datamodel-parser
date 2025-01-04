@@ -1,0 +1,89 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "DataModelSchema",
+    "type": "object",
+    "properties": {
+        "Database": {
+            "type": "object",
+            "properties": {
+                "Filename": {
+                    "type": "string"
+                },
+                "Name": {
+                    "type": "string"
+                },
+                "Schemas": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "Name": {
+                                "type": "string"
+                            },
+                            "Tables": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "Filename": {
+                                            "type": "string"
+                                        },
+                                        "Type": {
+                                            "type": "string"
+                                        },
+                                        "Name": {
+                                            "type": "string"
+                                        },
+                                        "Module": {
+                                            "type": "string"
+                                        },
+                                        "Entity": {
+                                            "type": "string"
+                                        },
+                                        "ReferencingEntity": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Module": {
+                                                    "type": "string"
+                                                },
+                                                "Entity": {
+                                                    "type": "string"
+                                                },
+                                                "Field": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": ["Module", "Entity", "Field"]
+                                        },
+                                        "ReferencedEntity": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Module": {
+                                                    "type": "string"
+                                                },
+                                                "Entity": {
+                                                    "type": "string"
+                                                },
+                                                "Field": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": ["Module", "Entity", "Field"]
+                                        },
+                                        "Qualification": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": ["Filename", "Type", "Name", "Module", "Entity"]
+                                }
+                            }
+                        },
+                        "required": ["Name", "Tables"]
+                    }
+                }
+            },
+            "required": ["Filename", "Name", "Schemas"]
+        }
+    },
+    "required": ["Database"]
+}
