@@ -5,24 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python Debugger: DDL Analysis - hardcoded arguments",
+            "name": "Python Debugger: DDL Analysis - hardcoded example arguments",
             "type": "debugpy",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
             "args": [
-                "doc/example/DDL"
-            ]
-        },
-        {
-            "name": "Python Debugger: Current File with Arguments",
-            "type": "debugpy",
-            "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal",
-            "args": [
-                "C:\\repos\\datamodel-parser\\doc\\example\\DDL"
-                //"${command:pickArgs}"
+                "${workspaceFolder}\\doc\\example\\DDL",
+                "utf-8",
+                "modulethree$entityfive"
             ]
         }
     ]

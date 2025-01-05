@@ -1,3 +1,11 @@
+Given a dictionary, I need to take a table name as a parameter and trace all Incoming references to produce a lineage. 
+
+for example: 
+
+table name: modulethree$entityfive 
+
+data model:
+
 {
     "Database": {
         "Name": "ABC",
@@ -91,28 +99,6 @@
                         "Qualification": "current"
                     },
                     {
-                        "Name": "moduletwo$entityeight",
-                        "Type": "simpleTable",
-                        "Module": "moduletwo",
-                        "Entity": "entityeight",
-                        "DDL": "dbo.moduletwo$entityeight.Table.sql",
-                        "References": {
-                            "Incoming": [],
-                            "Outgoing": [
-                                "moduletwo$entityseven"
-                            ]
-                        }
-                    },
-                    {
-                        "Name": "moduletwo$entityeight_entityseven",
-                        "Type": "joinTable",
-                        "Module": "moduletwo",
-                        "Entity": "entityeight_entityseven",
-                        "DDL": "dbo.moduletwo$entityeight_entityseven.Table.sql",
-                        "ReferencingTable": "moduletwo$entityeight",
-                        "ReferencedTable": "moduletwo$entityseven"
-                    },
-                    {
                         "Name": "moduletwo$entityfour",
                         "Type": "simpleTable",
                         "Module": "moduletwo",
@@ -143,9 +129,7 @@
                         "Entity": "entityseven",
                         "DDL": "dbo.moduletwo$entityseven.Table.sql",
                         "References": {
-                            "Incoming": [
-                                "moduletwo$entityeight"
-                            ],
+                            "Incoming": [],
                             "Outgoing": [
                                 "modulefour$entitysix"
                             ]
@@ -189,3 +173,11 @@
         ]
     }
 }
+
+expected output:
+
+- modulethree$entityfive
+    - modulefour$entitysix
+        - moduletwo$entitythree
+            - moduleone$entityone
+        - moduletwo$entityseven

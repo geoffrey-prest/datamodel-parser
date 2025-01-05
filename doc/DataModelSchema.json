@@ -1,12 +1,12 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "DataModelSchema",
+    "title": "DatabaseModelSchema",
     "type": "object",
     "properties": {
         "Database": {
             "type": "object",
             "properties": {
-                "Filename": {
+                "DDL": {
                     "type": "string"
                 },
                 "Name": {
@@ -25,13 +25,13 @@
                                 "items": {
                                     "type": "object",
                                     "properties": {
-                                        "Filename": {
-                                            "type": "string"
-                                        },
-                                        "Type": {
+                                        "DDL": {
                                             "type": "string"
                                         },
                                         "Name": {
+                                            "type": "string"
+                                        },
+                                        "Type": {
                                             "type": "string"
                                         },
                                         "Module": {
@@ -43,38 +43,38 @@
                                         "ReferencingEntity": {
                                             "type": "object",
                                             "properties": {
-                                                "Module": {
+                                                "Entity": {
                                                     "type": "string"
                                                 },
-                                                "Entity": {
+                                                "Module": {
                                                     "type": "string"
                                                 },
                                                 "Field": {
                                                     "type": "string"
                                                 }
                                             },
-                                            "required": ["Module", "Entity", "Field"]
+                                            "required": ["Entity", "Module", "Field"]
                                         },
                                         "ReferencedEntity": {
                                             "type": "object",
                                             "properties": {
-                                                "Module": {
+                                                "Entity": {
                                                     "type": "string"
                                                 },
-                                                "Entity": {
+                                                "Module": {
                                                     "type": "string"
                                                 },
                                                 "Field": {
                                                     "type": "string"
                                                 }
                                             },
-                                            "required": ["Module", "Entity", "Field"]
+                                            "required": ["Entity", "Module", "Field"]
                                         },
                                         "Qualification": {
                                             "type": "string"
                                         }
                                     },
-                                    "required": ["Filename", "Type", "Name", "Module", "Entity"]
+                                    "required": ["DDL", "Name", "Type", "Module", "Entity"]
                                 }
                             }
                         },
@@ -82,7 +82,7 @@
                     }
                 }
             },
-            "required": ["Filename", "Name", "Schemas"]
+            "required": ["DDL", "Name", "Schemas"]
         }
     },
     "required": ["Database"]
